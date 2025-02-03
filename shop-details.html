@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Plant Palace - Your Ultimate Gardening Solution</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+    <header class="header-area">
+        <div class="top-header-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="top-header-content d-flex align-items-center justify-content-between">
+                  <div class="top-header-meta">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i
+                        class="fa fa-envelope-o" aria-hidden="true"></i>
+                      <span>Email: plantplace@gmail.com</span></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone"
+                        aria-hidden="true"></i>
+                      <span>Phone: (021) 34580415 122</span></a>
+                  </div>
+                  <div class="top-header-meta d-flex">
+                    <div class="login">
+                      <a href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Login</span></a>
+                    </div>
+                    <div class="cart">
+                      <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span>Cart
+                          <span class="cart-quantity" id="cartQuantity">(0)</span></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alazea-main-menu">
+          <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+              <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt="" /></a>
+                <div class="classy-navbar-toggler">
+                  <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <div class="classy-menu">
+                  <div class="classycloseIcon">
+                    <div class="cross-wrap">
+                      <span class="top"></span><span class="bottom"></span>
+                    </div>
+                  </div>
+                  <div class="classynav">
+                    <ul>
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="./about.html">About</a></li>
+                      <li>
+                        <a href="#">Categories</a>
+                        <ul class="dropdown">
+                          <li>
+                            <a href="shop.html?cat=limeData">Lime Plants</a>
+                          </li>
+                          <li>
+                            <a href="shop.html?cat=mangoData">Mango Plants</a>
+                          </li>
+                          <li><a href="shop.html?cat=IndoorData">Indoor Plants</a></li>
+                          <li><a href="shop.html?cat=SucculentsData">Succulents Plants</a></li>
+                          <li>
+                            <a href="shop.html?cat=FloweringData">Flowering Shrubs Plants</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="shop.html">Shop</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <div class="search-form">
+                <form action="#" method="get">
+                  <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter..." />
+                  <button type="submit" class="d-none"></button>
+                </form>
+                <div class="closeIcon">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <div class="breadcrumb-area">
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
+            <h2>Checkout</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="single_product_details_area mb-50 mt-5">
+        <div class="produts-details--content mb-50">
+            <div class="container">
+                <div class="row justify-content-between" id="singleProd">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Single Product Details Area End ##### -->
+
+    <!-- ##### Related Product Area Start ##### -->
+    <div class="related-products-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>Related Products</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="relatedProd">
+
+               
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Related Product Area End ##### -->
+    <footer class="footer-area bg-img" style="background-color: rgb(117, 115, 56)">
+        <div class="main-footer-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-footer-widget">
+                  <div class="footer-logo mb-30">
+                    <a href="#"><img src="img/core-img/logo.png" alt="" /></a>
+                  </div>
+                  <p>
+                    Plants are the essence of life, thriving in diverse
+                    environments with the right balance of sunlight, water, and
+                    nutrients. Whether indoors or outdoors, each plant adapts to
+                    its surroundings, adding beauty and vitality to its space.
+                    With proper care, plants flourish, offering endless benefits
+                    to our environment and well-being.
+                  </p>
+                  <div class="social-info">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-footer-widget">
+                  <div class="widget-title">
+                    <h5>QUICK LINK</h5>
+                  </div>
+                  <nav class="widget-nav">
+                    <ul>
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="./about.html">About</a></li>
+                      <li><a href="shop.html">Shop</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-footer-widget">
+                  <div class="widget-title">
+                    <h5>BEST SELLER</h5>
+                  </div>
+                  <div class="single-best-seller-product d-flex align-items-center">
+                    <div class="product-thumbnail">
+                      <a href="shop-details.html?Id"><img src="./img/Almas.png" alt="" /></a>
+                    </div>
+                    <div class="product-info">
+                      <a href="shop-details.html?Id">Almas</a>
+                      <p>Rs: 7000</p>
+                    </div>
+                  </div>
+                  <div class="single-best-seller-product d-flex align-items-center">
+                    <div class="product-thumbnail">
+                      <a href="shop-details.html?Id"><img src="./img/lime.png" alt="" /></a>
+                    </div>
+                    <div class="product-info">
+                      <a href="shop-details.html?Id">Lime</a>
+                      <p>Rs: 6150</p>
+                    </div>
+                  </div>
+                  <div class="single-best-seller-product d-flex align-items-center">
+                    <div class="product-thumbnail">
+                      <a href="shop-details.html?Id"><img src="img/395.png" alt="" /></a>
+                    </div>
+                    <div class="product-info">
+                      <a href="shop-details.html?Id">Whale Fin Snake Plant</a>
+                      <p>Rs: 2150</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-footer-widget">
+                  <div class="widget-title">
+                    <h5>CONTACT</h5>
+                  </div>
+                  <div class="contact-information">
+                    <p>
+                      <strong>Address:</strong> Shah Faisal Colony Flyover, Faisal
+                      Cantonment, Karachi
+                    </p>
+                    <p><strong>Phone:</strong> (021) 34580415</p>
+                    <p><strong>Hours:</strong> 9 to 9 (Mon - Sat)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="border-line"></div>
+              </div>
+              <div class="col-12 text-center">
+                <div class="copywrite-text">
+                  <p>
+                    &copy; Copyright &copy;
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved | Plant Palace
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <!-- Data js -->
+    <script src="js/data.js"></script>
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Get the ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        var prodId = parseInt(urlParams.get('Id'))
+
+        var prodDetails = plantsData.find(data => data.id === prodId);
+
+        const prodDiv = document.getElementById('singleProd');
+
+        let prodData = `<div class="col-12 col-md-6 col-lg-5">
+                        <div class="single_product_thumb">
+                            <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a class="product-img" href="${prodDetails.image[0]}" title="Product Image" >
+                                            <img class="d-block w-100" src="${prodDetails.image[0]}" alt="1" style="width: 400px; height: 400px;">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a class="product-img" href="${prodDetails.image[1]}" title="Product Image" >
+                                            <img class="d-block w-100" src="${prodDetails.image[1]}" alt="2" style="width: 400px; height: 400px;">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a class="product-img" href="${prodDetails.image[2]}" title="Product Image" > 
+                                            <img class="d-block w-100" src="${prodDetails.image[2]}" alt="3" style="width: 400px; height: 400px;">
+                                        </a>
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li class="active" data-target="#product_details_slider" data-slide-to="0"
+                                        style="background-image: url(${prodDetails.image[0]});">
+                                    </li>
+                                    <li data-target="#product_details_slider" data-slide-to="1"
+                                        style="background-image: url(${prodDetails.image[1]});">
+                                    </li>
+                                    <li data-target="#product_details_slider" data-slide-to="2"
+                                        style="background-image: url(${prodDetails.image[2]});">
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="single_product_desc">
+                            <h4 class="title">${prodDetails.name}</h4>
+                            <h5>${prodDetails.species}</h5>   
+                            <hr>
+                            <div class="short_overview">
+                                <p>${prodDetails.description}
+                                </p>
+                                <table class="table table-bordered col-md-6">
+                                    <tr>
+                                        <td><b>Soil<b/></td>
+                                            <td>${prodDetails.soil}</td>
+                                        </tr>
+                                        <tr>
+                                        <td><b>Water<b/></td>
+                                            <td>${prodDetails.water}</td>
+                                        </tr>
+                                        <tr>
+                                        <td><b>Sunlight<b/></td>
+                                            <td>${prodDetails.sunlight}</td>
+                                        </tr>
+                                         <td><b>Growth Rate<b/></td>
+                                            <td>${prodDetails.growthRate}</td>
+                                        </tr>
+                                    </table>
+                                    <h4 class="price">${prodDetails.price}</h4>
+                            </div>
+
+                            <div class="cart--area d-flex flex-wrap align-items-center">
+                                <!-- Add to Cart Form -->
+                                <form class="cart clearfix d-flex align-items-center">
+                                    <div class="quantity">
+                                        <span class="qty-minus"
+                                            onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i
+                                                class="fa fa-minus" aria-hidden="true"></i></span>
+                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="12"
+                                            name="quantity" value="1">
+                                        <span class="qty-plus"
+                                            onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i
+                                                class="fa fa-plus" aria-hidden="true"></i></span>
+                                    </div>
+                                    <button onclick="addToCart(${prodDetails.id})" type="button" name="addtocart" value="5" class="btn alazea-btn ml-15">Add to
+                                        cart</button>
+                                </form>
+                                <!-- Wishlist & Compare -->
+                                <div class="wishlist-compare d-flex flex-wrap align-items-center">
+                                    <a href="#" class="wishlist-btn ml-15"><i class="icon_heart_alt"></i></a>
+                                    <a href="#" class="compare-btn ml-15"><i class="arrow_left-right_alt"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="products--meta">
+                                <p><span>Type:</span> <span>${prodDetails.type}</span></p>
+                                <p><span>Origin:</span> <span>${prodDetails.origin}</span></p>
+                                <p><span>Generation:</span> <span>${prodDetails.generation} </span></p>
+                                <p>
+                                    <span>Share on:</span>
+                                    <span>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>`
+
+
+        prodDiv.innerHTML = prodData;
+
+        const category = prodDetails.main;
+        const filteredPlants = plantsData.filter(plant => plant.main === category);
+        const shuffledPlants = filteredPlants.sort(() => 0.5 - Math.random());
+        const selectedPlants = shuffledPlants.slice(0, 4);
+
+       const related =  document.getElementById('relatedProd');
+       selectedPlants.forEach(prod => {
+       const relatedDiv = `<div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-product-area mb-100">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            <a href="shop-details.html?Id=${prod.id}"><img src="${prod.image[0]}" alt="${prod.name}" style="width: 300px; height: 300px;"></a>
+                            <!-- Product Tag -->
+                            <div class="product-tag">
+                                <a href="#">Sale</a>
+                            </div>
+                            <div class="product-meta d-flex">
+                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="shop-details.html?Id=${prod.id}" class="add-to-cart-btn">Details</a>
+                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product Info -->
+                        <div class="product-info mt-15 text-center">
+                            <a href="shop-details.html?Id=${prod.id}">
+                                <p>${prod.name}</p>
+                            </a>
+                            <h6>${prod.price}</h6>
+                        </div>
+                    </div>
+                </div>`
+                related.innerHTML += relatedDiv;
+            });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

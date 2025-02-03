@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Plant Palace - Your Ultimate Gardening Solution</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+    <header class="header-area">
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                    title="infodeercreative@gmail.com"><i class="fa fa-envelope-o"
+                                        aria-hidden="true"></i>
+                                    <span>Email: plantplace@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i
+                                        class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>Phone: (021) 34580415 122</span></a>
+                            </div>
+                            <div class="top-header-meta d-flex">
+                                <div class="login">
+                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                                        <span>Login</span></a>
+                                </div>
+                                <div class="cart">
+                                    <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span>Cart
+                                            <span class="cart-quantity" id="cartQuantity">(0)</span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt="" /></a>
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span><span class="bottom"></span>
+                                </div>
+                            </div>
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li>
+                                        <a href="#">Categories</a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="shop.html?cat=limeData">Lime Plants</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html?cat=mangoData">Mango Plants</a>
+                                            </li>
+                                            <li><a href="shop.html?cat=IndoorData">Indoor Plants</a></li>
+                                            <li><a href="shop.html?cat=SucculentsData">Succulents Plants</a></li>
+                                            <li>
+                                                <a href="shop.html?cat=FloweringData">Flowering Shrubs Plants</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search"
+                                placeholder="Type keywords &amp; press enter..." />
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <div class="closeIcon">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-area">
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
+            <h2>Checkout</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="shop-page section-padding-0-100">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
+
+                        <div class="shop-page-count">
+                            <p>Showing <span id="prodCount"></span> results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Sidebar Area -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="shop-sidebar-area">
+
+                        <!-- Shop Widget -->
+                        <div class="shop-widget catagory mb-50">
+                            <h4 class="widget-title">Categories</h4>
+                            <div class="widget-desc">
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck1" name="catRadio"
+                                        onchange="getDatabyCategory('all')">
+                                    <label class="custom-control-label" for="customCheck1">All plants <span
+                                            class="text-muted" id="all"> </span></label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck3" name="catRadio"
+                                        onchange="getDatabyCategory('mangoData')">
+                                    <label class="custom-control-label" for="customCheck3">Mango Plants<span
+                                            class="text-muted" id="mango"> </span></label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck2" name="catRadio"
+                                        onchange="getDatabyCategory('limeData')">
+                                    <label class="custom-control-label" for="customCheck2">Lime Plants<span
+                                            class="text-muted" id="lime"> </span></label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck4" name="catRadio"
+                                        onchange="getDatabyCategory('IndoorData')">
+                                    <label class="custom-control-label" for="customCheck4">Indoor Plants<span
+                                            class="text-muted" id="indoor"> </span></label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck5" name="catRadio"
+                                        onchange="getDatabyCategory('SucculentsData')">
+                                    <label class="custom-control-label" for="customCheck5">Succulents Plants<span
+                                            class="text-muted" id="succulents"> </span></label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
+                                    <input type="radio" class="custom-control-input" id="customCheck6" name="catRadio"
+                                        onchange="getDatabyCategory('FloweringData')">
+                                    <label class="custom-control-label" for="customCheck6">Flowering shrubs Plants<span
+                                            class="text-muted" id="flower"> </span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shop Widget -->
+                        <div class="shop-widget best-seller mb-50">
+                            <h4 class="widget-title">Best Seller</h4>
+                            <div class="widget-desc">
+
+                                <!-- Single Best Seller Products -->
+                                <div class="single-best-seller-product d-flex align-items-center">
+                                    <div class="product-thumbnail">
+                                        <a href="shop-details.html"><img src="img/Fajri.png" alt=""></a>
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="shop-details.html">Fajri Mango</a>
+                                        <p>Rs: 7000</p>
+                                        <div class="ratings">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Best Seller Products -->
+                                <div class="single-best-seller-product d-flex align-items-center">
+                                    <div class="product-thumbnail">
+                                        <a href="shop-details.html"><img src="img/orange.png" alt=""></a>
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="shop-details.html">Orange</a>
+                                        <p>Rs: 4480</p>
+                                        <div class="ratings">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single Best Seller Products -->
+                                <div class="single-best-seller-product d-flex align-items-center">
+                                    <div class="product-thumbnail">
+                                        <a href="shop-details.html"><img src="img/103.png" alt=""></a>
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="shop-details.html">Recuerdos Plant</a>
+                                        <p>Rs: 2100</p>
+                                        <div class="ratings">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Products Area -->
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="shop-products-area">
+                        <div class="row" id="shopProds">
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-area bg-img" style="background-color: rgb(117, 115, 56)">
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-30">
+                                <a href="#"><img src="img/core-img/logo.png" alt="" /></a>
+                            </div>
+                            <p>
+                                Plants are the essence of life, thriving in diverse
+                                environments with the right balance of sunlight, water, and
+                                nutrients. Whether indoors or outdoors, each plant adapts to
+                                its surroundings, adding beauty and vitality to its space.
+                                With proper care, plants flourish, offering endless benefits
+                                to our environment and well-being.
+                            </p>
+                            <div class="social-info">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>QUICK LINK</h5>
+                            </div>
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>BEST SELLER</h5>
+                            </div>
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="shop-details.html?Id"><img src="./img/Almas.png" alt="" /></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="shop-details.html?Id">Almas</a>
+                                    <p>Rs: 7000</p>
+                                </div>
+                            </div>
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="shop-details.html?Id"><img src="./img/lime.png" alt="" /></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="shop-details.html?Id">Lime</a>
+                                    <p>Rs: 6150</p>
+                                </div>
+                            </div>
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="shop-details.html?Id"><img src="img/395.png" alt="" /></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="shop-details.html?Id">Whale Fin Snake Plant</a>
+                                    <p>Rs: 2150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+                            <div class="contact-information">
+                                <p>
+                                    <strong>Address:</strong> Shah Faisal Colony Flyover, Faisal
+                                    Cantonment, Karachi
+                                </p>
+                                <p><strong>Phone:</strong> (021) 34580415</p>
+                                <p><strong>Hours:</strong> 9 to 9 (Mon - Sat)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="copywrite-text">
+                            <p>
+                                &copy; Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                All rights reserved | Plant Palace
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+        function getDatafromURL() {
+            let catParams = new URLSearchParams(window.location.search);
+            let category = catParams.get('cat');
+
+            let lime = plantsData.filter((proCat) => proCat.main == 'limeData');
+            let mango = plantsData.filter((proCat) => proCat.main == 'mangoData');
+            let indoor = plantsData.filter((proCat) => proCat.main == 'IndoorData');
+            let succ = plantsData.filter((proCat) => proCat.main == 'SucculentsData');
+            let flower = plantsData.filter((proCat) => proCat.main == 'FloweringData');
+            document.getElementById('lime').innerHTML = ' (' + lime.length + ')';
+            document.getElementById('mango').innerHTML = ' (' + mango.length + ')';
+            document.getElementById('indoor').innerHTML = ' (' + indoor.length + ')';
+            document.getElementById('succulents').innerHTML = ' (' + succ.length + ')';
+            document.getElementById('flower').innerHTML = ' (' + flower.length + ')';
+
+            if (category) {
+                var products = plantsData.filter((proCat) => proCat.main == category);
+                document.getElementById('prodCount').innerHTML = products.length;
+                document.getElementById('all').innerHTML = '(' + plantsData.length + ')';
+
+                switch (category) {
+                    case 'limeData':
+                        document.getElementById('customCheck1').checked = false;
+                        document.getElementById('customCheck2').checked = true;
+                        document.getElementById('customCheck3').checked = false;
+                        document.getElementById('customCheck4').checked = false;
+                        document.getElementById('customCheck5').checked = false;
+                        document.getElementById('customCheck6').checked = false;
+                        break;
+                    case 'mangoData':
+                        document.getElementById('customCheck1').checked = false;
+                        document.getElementById('customCheck2').checked = false;
+                        document.getElementById('customCheck3').checked = true;
+                        document.getElementById('customCheck4').checked = false;
+                        document.getElementById('customCheck5').checked = false;
+                        document.getElementById('customCheck6').checked = false;
+                        break;
+                    case 'IndoorData':
+                        document.getElementById('customCheck1').checked = false;
+                        document.getElementById('customCheck2').checked = false;
+                        document.getElementById('customCheck3').checked = false;
+                        document.getElementById('customCheck4').checked = true;
+                        document.getElementById('customCheck5').checked = false;
+                        document.getElementById('customCheck6').checked = false;
+                        break;
+
+                    case 'SucculentsData':
+                        document.getElementById('customCheck1').checked = false;
+                        document.getElementById('customCheck2').checked = false;
+                        document.getElementById('customCheck3').checked = false;
+                        document.getElementById('customCheck4').checked = false;
+                        document.getElementById('customCheck5').checked = true;
+                        document.getElementById('customCheck6').checked = false;
+                        break;
+
+                    case 'FloweringData':
+                        document.getElementById('customCheck1').checked = false;
+                        document.getElementById('customCheck2').checked = false;
+                        document.getElementById('customCheck3').checked = false;
+                        document.getElementById('customCheck4').checked = false;
+                        document.getElementById('customCheck5').checked = false;
+                        document.getElementById('customCheck6').checked = true;
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+
+                var products = plantsData.slice(0, 50);
+                document.getElementById('prodCount').innerHTML = products.length;
+                document.getElementById('all').innerHTML = '(' + plantsData.length + ')';
+                document.getElementById('customCheck1').checked = true;
+                document.getElementById('customCheck2').checked = false;
+                document.getElementById('customCheck3').checked = false;
+                document.getElementById('customCheck4').checked = false;
+                document.getElementById('customCheck5').checked = false;
+                document.getElementById('customCheck6').checked = false;
+
+            }
+
+
+            let newProds = document.getElementById("shopProds");
+            newProds.innerHTML = '';
+            products.forEach((lime) => {
+                let prodshop = `<div class="col-12 col-sm-6 col-lg-4">
+                                <div class="single-product-area mb-50">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                         <a href="shop-details.html?Id=${lime.id}"><img src="${lime.image[0]}" alt="${lime.name}"  style="width: 300px; height: 300px;"></a>
+                                        <!-- Product Tag -->
+                                        <div class="product-tag">
+                                            <a href="#">Sale</a>
+                                        </div>
+                                        <div class="product-meta d-flex">
+                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                            <a href="shop-details.html?Id=${lime.id}" class="add-to-cart-btn">Details</a>
+                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Info -->
+                                    <div class="product-info mt-15 text-center">
+                                      <a href="shop-details.html">
+                                <p>${lime.name}</p>
+                            </a>
+                            <h6>${lime.price}</h6>
+                                    </div>
+                                </div>
+                            </div>`;
+
+                newProds.innerHTML += prodshop;
+            });
+
+        }
+
+        function getDatabyCategory(filterCategory) {
+            let newwProds = document.getElementById("shopProds");
+            newwProds.innerHTML = '';
+
+            if (filterCategory == "all") {
+                var Newproducts = plantsData;
+            } else {
+                var Newproducts = plantsData.filter((proCat) => proCat.main == filterCategory);
+            }
+            document.getElementById('prodCount').innerHTML = Newproducts.length;
+
+            Newproducts.forEach((lime) => {
+                let prodshopp = `<div class="col-12 col-sm-6 col-lg-4">
+                                <div class="single-product-area mb-50">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                         <a href="shop-details.html?Id=${lime.id}"><img src="${lime.image[0]}" alt="${lime.name}"  style="width: 300px; height: 300px;"></a>
+                                        <!-- Product Tag -->
+                                        <div class="product-tag">
+                                            <a href="#">Sale</a>
+                                        </div>
+                                        <div class="product-meta d-flex">
+                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                            <a href="shop-details.html?Id=${lime.id}" class="add-to-cart-btn">Details</a>
+                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Info -->
+                                    <div class="product-info mt-15 text-center">
+                                      <a href="shop-details.html">
+                                <p>${lime.name}</p>
+                            </a>
+                            <h6>${lime.price}</h6>
+                                    </div>
+                                </div>
+                            </div>`;
+
+                newwProds.innerHTML += prodshopp;
+            });
+
+
+        }
+        window.onload = function () {
+            getDatafromURL();
+        };
+
+
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>
